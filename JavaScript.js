@@ -5,7 +5,7 @@ let myFunction=()=> {
     let name = document.getElementById('Name').value;
     let year = document.getElementById('Year').value;
     let id = document.getElementById('Id').value;
-    let apiUrl = 'http://www.omdbapi.com/?';
+    let apiUrl = 'https://www.omdbapi.com/?';
 
     if ($.trim(name).length > 0) {
         apiUrl = apiUrl+'t=' + name + '&';
@@ -14,7 +14,7 @@ let myFunction=()=> {
         apiUrl = apiUrl + 'y=' + year + '&';
     }
     if ($.trim(id).length > 0) {
-        apiUrl = 'http://www.omdbapi.com/?' + 'i=' + id + '&';
+        apiUrl = 'https://www.omdbapi.com/?' + 'i=' + id + '&';
     }
     getMovieDetails(apiUrl);
 }
